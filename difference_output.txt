@@ -1,0 +1,204 @@
+Only in oss-pipeline-config.d-711_BKP_05122021_reverted: 30_filter_accosa_applog.logstash.conf
+diff oss-pipeline-config.d-711_BKP_05122021_reverted/30_filter_adv_applog.logstash.conf oss-pipeline-config.d-711/30_filter_adv_applog.logstash.conf
+8c8
+<         "message" => "^\[(?<timestamp>[^\[]+)\] \[(%{WORD:log.level})(| +)\] \[(?<thread.id>[^ ]+)\] (\[(?<field1>[^ ]+)\] |)(?<payload>(.|\r|\n)*)"
+---
+>         "message" => "^\[(?<timestamp>[^\[]+)\] \[(%{WORD:log.level})(| +)\] \[(?<thread.id>[^ ]+)\] \[(?<field1>[^ ]+)\] (?<payload>(.|\r|\n)*)"
+21c21
+<     if "adv_applog_alert_grokfailure" in [tags] or "adv_applog_alert_date_parsefailure" in [tags] {
+---
+>     if "adv_applog_alert_grokfailure" in [tags] or "adv_applog_alert_grokfailure" in [tags] {
+diff oss-pipeline-config.d-711_BKP_05122021_reverted/30_filter_backbase_pws_applog.logstash.conf oss-pipeline-config.d-711/30_filter_backbase_pws_applog.logstash.conf
+21c21
+<     if "backbase_pws_applog_alert_grokfailure" in [tags] or "backbase_pws_applog_alert_date_parsefailure" in [tags] {
+---
+>     if "backbase_pws_applog_alert_grokfailure" in [tags] or "backbase_pws_applog_alert_grokfailure" in [tags] {
+diff oss-pipeline-config.d-711_BKP_05122021_reverted/30_filter_cur_applog.logstash.conf oss-pipeline-config.d-711/30_filter_cur_applog.logstash.conf
+21c21
+<     if "cur_applog_alert_grokfailure" in [tags] or "cur_applog_alert_date_parsefailure" in [tags] {
+---
+>     if "cur_applog_alert_grokfailure" in [tags] or "cur_applog_alert_grokfailure" in [tags] {
+Only in oss-pipeline-config.d-711_BKP_05122021_reverted: 30_filter_dcms_applog.logstash.conf
+diff oss-pipeline-config.d-711_BKP_05122021_reverted/30_filter_dcrs_applog.logstash.conf oss-pipeline-config.d-711/30_filter_dcrs_applog.logstash.conf
+21c21
+<     if "dcrs_applog_alert_grokfailure" in [tags] or "dcrs_applog_alert_date_parsefailure" in [tags] {
+---
+>     if "dcrs_applog_alert_grokfailure" in [tags] or "dcrs_applog_alert_grokfailure" in [tags] {
+diff oss-pipeline-config.d-711_BKP_05122021_reverted/30_filter_debos_dponnet-err.logstash.conf oss-pipeline-config.d-711/30_filter_debos_dponnet-err.logstash.conf
+21c21
+<     if "debos_dponnet-err_alert_grokfailure" in [tags] or "debos_dponnet-err_alert_date_parsefailure" in [tags] {
+---
+>     if "debos_dponnet-err_alert_grokfailure" in [tags] or "debos_dponnet-err_alert_grokfailure" in [tags] {
+Only in oss-pipeline-config.d-711_BKP_05122021_reverted: 30_filter_dnc_applog.logstash.conf
+diff oss-pipeline-config.d-711_BKP_05122021_reverted/30_filter_eguard_csr-app.logstash.conf oss-pipeline-config.d-711/30_filter_eguard_csr-app.logstash.conf
+9,10c9
+<            "message" => "^(?<timestamp>.{23}) %{WORD:log.level} +\[((?<class.name>[^ ]+)\.|)(?<method.name>[^ \.]+)\] \((?<user.id>[^\)]+)\) %{GREEDYDATA:payload}"
+<            #"message" => "^node-%{DATA}-%{DATA}-(?<timestamp>[^\[]+) \[(%{WORD:log.level})(| +)\] (?<thread.id>[^ ]+) +(?<class.name>[^ ]+)\.(?<method.name>[^ \.]+) (?<payload>(.|\r|\n)*)"
+---
+>            "message" => "^node-%{DATA}-%{DATA}-(?<timestamp>[^\[]+) \[(%{WORD:log.level})(| +)\] (?<thread.id>[^ ]+) +(?<class.name>[^ ]+)\.(?<method.name>[^ \.]+) (?<payload>(.|\r|\n)*)"
+diff oss-pipeline-config.d-711_BKP_05122021_reverted/30_filter_enet_applog.logstash.conf oss-pipeline-config.d-711/30_filter_enet_applog.logstash.conf
+21c21
+<     if "enet_applog_alert_grokfailure" in [tags] or "enet_applog_alert_date_parsefailure" in [tags] {
+---
+>     if "enet_applog_alert_grokfailure" in [tags] or "enet_applog_alert_grokfailure" in [tags] {
+diff oss-pipeline-config.d-711_BKP_05122021_reverted/30_filter_finnone_neo_applog.logstash.conf oss-pipeline-config.d-711/30_filter_finnone_neo_applog.logstash.conf
+21c21
+<     if "finnone_neo_applog_alert_grokfailure" in [tags] or "finnone_neo_applog_alert_date_parsefailure" in [tags] {
+---
+>     if "finnone_neo_applog_alert_grokfailure" in [tags] or "imps_applog_alert_grokfailure" in [tags] {
+diff oss-pipeline-config.d-711_BKP_05122021_reverted/30_filter_ihsacl.logstash.conf oss-pipeline-config.d-711/30_filter_ihsacl.logstash.conf
+89,90c89
+<   				#"message" => "(-|%{IP:client.ip}) %{IP:server.ip} %{NOTSPACE:field1} %{NOTSPACE:field2} \[(?<timestamp>[^\]]+)\] %{NUMBER:http.response.status_code} %{NUMBER:http.response.time} %{NUMBER:http.response.body.bytes} (-|%{NOTSPACE:jvm.id}:%{NUMBER:jvm.port}) %{NUMBER:other_number} \"%{NOTSPACE:http.session.id}\" %{NOTSPACE:http.uri}"
+<   				"message" => "(-|%{IP:client.ip}) (-|%{WORD:jvm.name}) %{IP:server.ip} %{NOTSPACE:field1} %{NOTSPACE:field2} \[(?<timestamp>[^\]]+)\] %{NUMBER:http.response.status_code} %{NUMBER:http.response.time} %{NUMBER:http.response.body.bytes} (-|%{NOTSPACE:jvm.id}:%{NUMBER:jvm.port}) %{NUMBER:other_number} \"%{NOTSPACE:http.session.id}\" %{NOTSPACE:http.uri}"
+---
+>   				"message" => "(-|%{IP:client.ip}) %{IP:server.ip} %{NOTSPACE:field1} %{NOTSPACE:field2} \[(?<timestamp>[^\]]+)\] %{NUMBER:http.response.status_code} %{NUMBER:http.response.time} %{NUMBER:http.response.body.bytes} (-|%{NOTSPACE:jvm.id}:%{NUMBER:jvm.port}) %{NUMBER:other_number} \"%{NOTSPACE:http.session.id}\" %{NOTSPACE:http.uri}"
+diff oss-pipeline-config.d-711_BKP_05122021_reverted/30_filter_imps_applog.logstash.conf oss-pipeline-config.d-711/30_filter_imps_applog.logstash.conf
+21c21
+<     if "imps_applog_alert_grokfailure" in [tags] or "imps_applog_alert_date_parsefailure" in [tags] {
+---
+>     if "imps_applog_alert_grokfailure" in [tags] or "imps_applog_alert_grokfailure" in [tags] {
+Only in oss-pipeline-config.d-711_BKP_05122021_reverted: 30_filter_leadinsta_applog.logstash.conf
+diff oss-pipeline-config.d-711_BKP_05122021_reverted/30_filter_leads_marketing_applog.logstash.conf oss-pipeline-config.d-711/30_filter_leads_marketing_applog.logstash.conf
+21c21
+<     if "leads_marketing_applog_alert_grokfailure" in [tags] or "leads_marketing_applog_alert_date_parsefailure" in [tags] {
+---
+>     if "leads_marketing_applog_alert_grokfailure" in [tags] or "leads_marketing_applog_alert_grokfailure" in [tags] {
+diff oss-pipeline-config.d-711_BKP_05122021_reverted/30_filter_ncb_fcrjdebuglog.logstash.conf oss-pipeline-config.d-711/30_filter_ncb_fcrjdebuglog.logstash.conf
+21c21
+<     if "ncb_fcrjdebuglog_alert_grokfailure" in [tags] or "ncb_fcrjdebuglog_alert_date_parsefailure" in [tags] {
+---
+>     if "ncb_fcrjdebuglog_alert_grokfailure" in [tags] or "ncb_fcrjdebuglog_alert_grokfailure" in [tags] {
+Only in oss-pipeline-config.d-711_BKP_05122021_reverted: 30_filter_nps_applog.logstash.conf
+diff oss-pipeline-config.d-711_BKP_05122021_reverted/30_filter_nrs_applog.logstash.conf oss-pipeline-config.d-711/30_filter_nrs_applog.logstash.conf
+9d8
+<         #"message" => "^(?<timestamp>.{23}) +%{WORD:log.level} +%{NOTSPACE:thread.id} +(?<payload>(.|\r|\n)*)"
+22c21
+<     if "nrs_applog_alert_grokfailure" in [tags] or "nrs_applog_alert_date_parsefailure" in [tags] {
+---
+>     if "nrs_applog_alert_grokfailure" in [tags] or "nrs_applog_alert_grokfailure" in [tags] {
+diff oss-pipeline-config.d-711_BKP_05122021_reverted/30_filter_oracleapps_applog.logstash.conf oss-pipeline-config.d-711/30_filter_oracleapps_applog.logstash.conf
+24c24
+<     if "oracleapps_applog_alert_grokfailure" in [tags] or "oracleapps_applog_alert_date_parsefailure" in [tags] {
+---
+>     if "oracleapps_applog_alert_grokfailure" in [tags] or "oracleapps_applog_alert_grokfailure" in [tags] {
+diff oss-pipeline-config.d-711_BKP_05122021_reverted/30_filter_public_api_gw_applog.logstash.conf oss-pipeline-config.d-711/30_filter_public_api_gw_applog.logstash.conf
+92c92
+<     if "public_api_gw_applog_alert_grokfailure" in [tags] or "public_api_gw_applog_alert_date_parsefailure" in [tags] {
+---
+>     if "public_api_gw_applog_alert_grokfailure" in [tags] or "public_api_gw_applog_alert_grokfailure" in [tags] {
+diff oss-pipeline-config.d-711_BKP_05122021_reverted/30_filter_rbi_adf_applog.logstash.conf oss-pipeline-config.d-711/30_filter_rbi_adf_applog.logstash.conf
+21c21
+<     if "rbi_adf_applog_alert_grokfailure" in [tags] or "rbi_adf_applog_alert_date_parsefailure" in [tags] {
+---
+>     if "rbi_adf_applog_alert_grokfailure" in [tags] or "rbi_adf_applog_alert_grokfailure" in [tags] {
+diff oss-pipeline-config.d-711_BKP_05122021_reverted/30_filter_sap_applog.logstash.conf oss-pipeline-config.d-711/30_filter_sap_applog.logstash.conf
+25c25
+<     if "sap_applog_alert_grokfailure" in [tags] or "sap_applog_alert_date_parsefailure" in [tags] {
+---
+>     if "sap_applog_alert_grokfailure" in [tags] or "sap_applog_alert_grokfailure" in [tags] {
+diff oss-pipeline-config.d-711_BKP_05122021_reverted/30_filter_snorkel_applog.logstash.conf oss-pipeline-config.d-711/30_filter_snorkel_applog.logstash.conf
+21c21
+<     if "snorkel_v5_applog_alert_grokfailure" in [tags] or "snorkel_v5_applog_alert_date_parsefailure" in [tags] {
+---
+>     if "snorkel_v5_applog_alert_grokfailure" in [tags] or "snorkel_v5_applog_alert_grokfailure" in [tags] {
+diff oss-pipeline-config.d-711_BKP_05122021_reverted/30_filter_snorkel-var-log-msg.logstash.conf oss-pipeline-config.d-711/30_filter_snorkel-var-log-msg.logstash.conf
+1c1
+< # var log message log file type 
+---
+> # snorkel Websphere syserr 
+4c4
+<    if "var-log-msg" == [logfile.type] {
+---
+>    if "snorkel" == [service.name] and "var-log-msg" == [logfile.type] {
+6c6
+<          id => "var-log-msg_grok"
+---
+>          id => "snorkel_var-log-msg_grok"
+10c10
+<          tag_on_failure => [ "var-log-msg_grokfailure" ]
+---
+>          tag_on_failure => [ "snorkel_var-log-msg_grokfailure" ]
+13c13
+<       if "var-log-msg_grokfailure" in [tags]{
+---
+>       if "snorkel_var-log-msg_grokfailure" in [tags]{
+diff oss-pipeline-config.d-711_BKP_05122021_reverted/30_filter_swift_applog.logstash.conf oss-pipeline-config.d-711/30_filter_swift_applog.logstash.conf
+21c21
+<     if "swift_applog_alert_grokfailure" in [tags] or "swift_applog_alert_date_parsefailure" in [tags] {
+---
+>     if "swift_applog_alert_grokfailure" in [tags] or "swift_applog_alert_grokfailure" in [tags] {
+diff oss-pipeline-config.d-711_BKP_05122021_reverted/30_filter_ton-tf-debug.logstash.conf oss-pipeline-config.d-711/30_filter_ton-tf-debug.logstash.conf
+4c4
+<    if "ton" == [service.name] and ("tf-debug" == [logfile.type] or "tf-error" == [logfile.type]) {
+---
+>    if "ton" == [service.name] and "tf-debug" == [logfile.type] {
+6c6
+<          id => "ton_tf_grok"
+---
+>          id => "ton_tf-debug_grok"
+8,9c8
+<           # "message" => "\[WebContainer : %{NOTSPACE:webcontainer}\]\[(?<timestamp>[^\]]+)\] +(?<log.level>[^ ]+) +(?<class.name>[^ ]+)\.(?<method.name>[^ \.]+):(?<payload>(.|\r|\n)*)"
+<            "message" => "\[%{WORD}(-| : )%{NOTSPACE:webcontainer}\]\[(?<timestamp>[^\]]+)\] +(?<log.level>[^ ]+) +(?<class.name>[^ ]+)\.(?<method.name>[^ \.]+):(?<payload>(.|\r|\n)*)"
+---
+>            "message" => "\[WebContainer : %{NOTSPACE:webcontainer}\]\[(?<timestamp>.{21}) IST\] +(?<log.level>[^ ]+) +(?<class.name>[^ ]+)\.(?<method.name>[^ \.]+):(?<payload>(.|\r|\n)*)"
+11c10
+<          tag_on_failure => [ "ton_tf_grokfailure" ]
+---
+>          tag_on_failure => [ "ton_tf-debug_grokfailure" ]
+15,18c14,16
+<          id => "ton_tf_date"
+<          #19/12/20 16:57:27:027 IST
+<          match => ["timestamp","ISO8601","dd/MM/YY HH:mm:ss:SSS zZ"]
+<          tag_on_failure => [ "ton_tf_date_parsefailure" ]
+---
+>          id => "ton_tf-debug_date"
+>          match => ["timestamp","ISO8601","MM/dd/YY HH:mm:ss:SSS zZ"]
+>          tag_on_failure => [ "ton_tf-debug_date_parsefailure" ]
+21c19
+<       if "ton_tf_grokfailure" in [tags] or "ton_tf_date_parsefailure" in [tags]{
+---
+>       if "ton_tf-debug_grokfailure" in [tags] or "ton_tf-debug_date_parsefailure" in [tags]{
+Only in oss-pipeline-config.d-711: 30_filter_ton-tf-error.logstash.conf
+diff oss-pipeline-config.d-711_BKP_05122021_reverted/30_filter_wl-acl.logstash.conf oss-pipeline-config.d-711/30_filter_wl-acl.logstash.conf
+18,25d17
+<     }else if "cc_webcollection" == [service.name] {
+<       grok {
+<         id => "cc_webcollection_wl_acl_grok"
+<           match => {
+<           #c-ip auth_user date time time-taken cs-method csuri cs-status bytes
+<           "message" => "%{IP:client.ip}%{SPACE}%{SPACE}%{NOTSPACE:user.id}%{SPACE}%{DATA:date}%{SPACE}%{TIME:time}%{SPACE}%{DATA:http.response.time}%{SPACE}%{WORD:http.request.method}%{SPACE}%{NOTSPACE:http.uri}%{SPACE}%{NUMBER:http.response.status_code}"
+<           }
+<       }
+41,48d32
+<     }else if "upi" == [service.name] {
+<       grok {
+<         id => "upi_wl_acl_grok"
+<           match => {
+<           #Fields:      date time cs-method cs-uri sc-status 
+<           "message" => "%{DATA:date}%{SPACE}%{TIME:time}%{SPACE}%{DATA:http.response.time}%{SPACE}%{WORD:http.request.method}%{SPACE}%{NOTSPACE:http.uri}%{SPACE}%{NUMBER:http.response.status_code}"
+<           }
+<       }
+63c47
+<     }else if "fas" == [service.name] or "dcrs" == [service.name] or "webcollection" == [service.name] {
+---
+>     }else if "fas" == [service.name] {
+99c83
+<     if !("fas" == [service.name] or "dcrs" == [service.name] or "webcollection" == [service.name]) {
+---
+>     if !("fas" == [service.name]) {
+diff oss-pipeline-config.d-711_BKP_05122021_reverted/30_filter_wl-diag.logstash.conf oss-pipeline-config.d-711/30_filter_wl-diag.logstash.conf
+10,11c10
+<           #"message" => ["^<(?<timestamp>[^>]+)> +<(?<log.level>[^>]+)> +<(?<log.logger>[^>]+)> +<(?<response.code>[^>]+)> +<(?<payload>(.|\r|\n)*)>"]
+<           "message" => ["^<(?<timestamp>[^>]+)> +<(?<log.level>[^>]+)> +<(?<log.logger>[^>]+)> +(<(?<response.code>[^>]+)> +|)<(?<payload>(.|\r|\n)*)>"]
+---
+>           "message" => ["^<(?<timestamp>[^>]+)> +<(?<log.level>[^>]+)> +<(?<log.logger>[^>]+)> +<(?<response.code>[^>]+)> +<(?<payload>(.|\r|\n)*)>"]
+28,29c27
+< 			#match => ["timestamp","ISO8601","YYYY-MM-dd'T'HH:mm:ss.SSSSZ","MMM dd, YYYY, HH:mm:ss,SSS a 'IST'"]
+< 			match => ["timestamp","ISO8601","YYYY-MM-dd'T'HH:mm:ss.SSSSZ","MMM dd, YYYY, HH:mm:ss,SSS a 'IST'","MMM dd, YYYY HH:mm:ss a 'IST'","dd MMM, YYYY, HH:mm:ss,SSS a 'IST'","dd MMM, YYYY HH:mm:ss a 'IST'","dd MMM, YYYY, HH:mm:ss,SS a 'IST'"]
+---
+> 			match => ["timestamp","ISO8601","YYYY-MM-dd'T'HH:mm:ss.SSSSZ","MMM dd, YYYY, HH:mm:ss,SSS a 'IST'"]
+diff oss-pipeline-config.d-711_BKP_05122021_reverted/30_filter_xelerate_gst_applog.logstash.conf oss-pipeline-config.d-711/30_filter_xelerate_gst_applog.logstash.conf
+25c25
+<     if "xelerate_gst_applog_alert_grokfailure" in [tags] or "xelerate_gst_applog_alert_date_parsefailure" in [tags] {
+---
+>     if "xelerate_gst_applog_alert_grokfailure" in [tags] or "xelerate_gst_applog_alert_grokfailure" in [tags] {
