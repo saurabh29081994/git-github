@@ -1,0 +1,20 @@
+Shard count change
+logscan-raw-customer_power-wineventlog-	0.019921875	32	8
+- Customer power winevent log [4 -- 1]
+logscan-raw-debos-wineventlog-	0.034277344	16	153799	8
+- debos winevent [2--1]
+
+Move from zone 1
+logscan-raw-eguard-eguard-server-	218.1477539	18	9   moved to zone 2
+
+logscan-raw-tradestream-applog-	160.9261719	16	1055560696	8 moved to zone 9
+
+
+Need to check the winlogevent
+logscan-raw-multifond-wineventlog-	26.5	8	93024876	8
+logscan-raw-talisma-wineventlog-	157.2	8	779647025	8 
+
+
+
+this is me saurabh
+
